@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Wild - Explore the World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css" integrity="sha512-ioRJH7yXnyX+7fXTQEKPULWkMn3CqMcapK0NNtCN8q//sW7ZeVFcbMJ9RvX99TwDg6P8rAH2IqUSt2TLab4Xmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {},
+            screens: {
+                'sm': '320px',
+                'md': '768px',
+                'lg': '1024px',
+                'xl': '1280px',
+                '2xl': '1536px',
+            },
+            fontFamily: {
+                sans: ['"Open Sans"', 'sans-serif'],
+                kumbh: ['"Kumbh Sans"', 'sans-serif'],
+            },
+        },
+        plugins: [],
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .slick-next:before, .slick-prev:before{
+            color: #63ab45;
+            opacity: 1;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header class="p-2.5 bg-[#fff]">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="logo-wrap">
+                    <div><img class="w-[200px]" src="./images/logo.png" /></div>
+                </div>
+                <div class="menu-items flex justify-between items-center gap-10">
+                    <div class="col-1 flex gap-2.5">
+                        <div class="icon"><i aria-hidden="true" class="fa fa-mobile text-[#63ab45]"></i></div>
+                        <div class="text">
+                            <p class="text-[#82828a] text-[14px]">Drop a Line</p>
+                            <p><a href="tel:9876543212" title="+91 9876543212" >+91 9876543212</a></p>
+                        </div>
+                    </div>
+                    <div class="col-2 flex gap-2.5">
+                        <div class="icon"><i aria-hidden="true" class="fa fa-envelope text-[#63ab45]"></i></div>
+                        <div class="text">
+                            <p class="text-[#82828a] text-[14px]">Email Address</p>
+                            <p><a href="mailto:contact@example.com" title="contact@example.com" >contact@example.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#1d231f] p-5 mt-5 rounded relative z-10">
+                <div class="menu-items flex justify-center items-center gap-10">
+                    <a href="#home" title="Home" class="text-[#fff] font-kumbh font-bold">Home</a>
+                    <a href="#about" title="About Us" class="text-[#fff]  font-kumbh font-bold">About Us</a>
+                    <a href="#testimonials" title="Testimonials" class="text-[#fff] font-kumbh font-bold">Testimonials</a>
+                    <a href="#contact" title="Contact Us" class="text-[#fff] font-kumbh font-bold">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="home" class="-mt-11 h-[650px] bg-center bg-no-repeat bg-cover" style="background-image: url('./images/slider-1.jpg');">
+        <div class="banner-section">
+            <div class="container mx-auto">
+                <div class="relative flex justify-left items-center h-[650px]">
+                    <div class="tagline">
+                        <h1 class="text-[#fff] font-kumbh font-bold text-[60px] leading-[1.2] mb-5">Tour & Travel <br>Adventure Camping</h1>
+                        <div class="button p-4 rounded bg-[#63ab46] inline-block cursor-pointer">
+                            <a href="#about" class="text-[#fff] font-kumbh font-bold inline-block">Let's Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-bottom bg-no-repeat bg-cover" style="background-image: url('./images/bg-shape-02.png');">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 gap-10 items-center">
+                <div class="block-1">
+                    <div class="heading-wrap">
+                        <p class="sub-title inline-block rounded text-[#63ab45] py-2 px-4 mb-2 font-kumbh font-bold bg-[#63ab4520]">About Company</p>
+                        <h2 class="text-[#1c231f] font-extrabold font-kumbh text-[40px] leading-[1.2]">Great opportunity for adventure & travels</h2>
+                    </div>
+                    <div class="content">
+                        <ul class="mt-5">
+                            <li class="p-1 capitalize text-[16px]"><i aria-hidden="true" class="fas fa-check-circle text-[#63ab45]"></i> Safety first always</li>
+                            <li class="p-1 capitalize text-[16px]"><i aria-hidden="true" class="fas fa-check-circle text-[#63ab45]"></i> Low price & friendly</li>
+                            <li class="p-1 capitalize text-[16px]"><i aria-hidden="true" class="fas fa-check-circle text-[#63ab45]"></i> Trusted travel guide</li>
+                            <li class="p-1 capitalize text-[16px]"><i aria-hidden="true" class="fas fa-check-circle text-[#63ab45]"></i> Best Food Allocation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block-2">
+                    <img class="rounded w-[100%]" src="./images/blog.jpeg">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16">
+        <div class="container mx-auto">
+            <div class="heading-wrap text-center">
+                <p class="sub-title inline-block rounded text-[#63ab45] py-2 px-4 mb-2 font-kumbh font-bold bg-[#63ab4520]">Testimonials</p>
+                <h2 class="text-[#1c231f] font-extrabold font-kumbh text-[40px] leading-[1.2] ">What our traveler say about our tour services</h2>
+            </div>
+            <br><br>
+            <div class="testimonial-slider-wrapper">
+                <div id="testimonialSlider">
+                    <div class="item p-10 rounded border border-gray-500/40 mx-5 bg-[#fff]">
+                        <div class="flex justify-left items-center gap-4 mb-6">
+                            <img class="w-[60px]" src="./images/quote-green.png" >
+                            <div class="title">
+                                <h3 class="mb-2 font-bold font-kumbh text-[20px] leading-[1.2]">Quality Services</h3>
+                                <div class="rating flex justify-left items-center gap-2">
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-kumbh text-[16px]">To take trivial example which of ever undertakes laborious physical exercise, except to obtain some advantage from it. 
+                            But who has any right to find fault with a man who chooses to enjoy.</p>
+                    </div>
+                    <div class="item p-10 rounded border border-gray-500/40 mx-5 bg-[#fff]">
+                        <div class="flex justify-left items-center gap-4 mb-6">
+                            <img class="w-[60px]" src="./images/quote-green.png" >
+                            <div class="title">
+                                <h3 class="mb-2 font-bold font-kumbh text-[20px] leading-[1.2]">Quality Services</h3>
+                                <div class="rating flex justify-left items-center gap-2">
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-kumbh text-[16px]">To take trivial example which of ever undertakes laborious physical exercise, except to obtain some advantage from it. 
+                            But who has any right to find fault with a man who chooses to enjoy.</p>
+                    </div>
+                    <div class="item p-10 rounded border border-gray-500/40 mx-5 bg-[#fff]">
+                        <div class="flex justify-left items-center gap-4 mb-6">
+                            <img class="w-[60px]" src="./images/quote-green.png" >
+                            <div class="title">
+                                <h3 class="mb-2 font-bold font-kumbh text-[20px] leading-[1.2]">Quality Services</h3>
+                                <div class="rating flex justify-left items-center gap-2">
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[16px] font-kumbh">To take trivial example which of ever undertakes laborious physical exercise, except to obtain some advantage from it. 
+                            But who has any right to find fault with a man who chooses to enjoy.</p>
+                    </div>
+                    <div class="item p-10 rounded border border-gray-500/40 mx-5 bg-[#fff]">
+                        <div class="flex justify-left items-center gap-4 mb-6">
+                            <img class="w-[60px]" src="./images/quote-green.png" >
+                            <div class="title">
+                                <h3 class="mb-2 font-bold font-kumbh text-[20px] leading-[1.2]">Quality Services</h3>
+                                <div class="rating flex justify-left items-center gap-2">
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                    <i class="fa fa-star text-[#F7921E]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[16px] font-kumbh">To take trivial example which of ever undertakes laborious physical exercise, except to obtain some advantage from it. 
+                            But who has any right to find fault with a man who chooses to enjoy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16">
+        <div class="container mx-auto"></div>
+    </section>
+
+    
+    <footer class="py-5 bg-[#1d231f]">
+        <div class="container mx-auto">
+            <div class="text-wrap text-center">
+                <p class="text-[#fff]">@2023, Designed and Developed By Nisha Prasad !!!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/js/all.min.js" integrity="sha512-YfPUURC5CqzBHKXk0+zbKsE8BKmnt3TnW64tQkT0kShXIUU/ikFfCD0KPeXEE4cTCt1R/CNGLzjUDcN3AkYBRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        $('#testimonialSlider').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            speed: 1000,
+            arrows:true,
+            margin:'20',
+            // autoplay: true,
+            // autoplaySpeed: 2000,
+        });
+    </script>
+</body>
+</html>
